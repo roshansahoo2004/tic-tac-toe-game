@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app">
+    <header>
+      <h1>Tic Tac Toe</h1>
+
+      <div class="top-controls">
+        <select id="modeSelect">
+          <option value="ai">Player vs Computer</option>
+          <option value="pvp">Multiplayer</option>
+        </select>
+
+        <button id="themeToggle">🌙</button>
+        <button id="soundToggle">🔊</button>
+      </div>
+    </header>
+
+    <div id="turnIndicator">Player X Turn</div>
+
+    <div class="board" id="board"></div>
+
+    <div class="message" id="message"></div>
+
+    <div class="scores">
+      <div>X: <span id="scoreX">0</span></div>
+      <div>O/AI: <span id="scoreO">0</span></div>
+      <div>Draws: <span id="scoreDraw">0</span></div>
+    </div>
+
+    <div class="controls">
+      <button id="restartBtn">Restart Round</button>
+      <button id="resetScoresBtn">Reset Scores</button>
+    </div>
+  </div>
+
+  <!-- Sounds -->
+
+  <audio id="clickSound" src="mixkit-mouse-click-close-1113.mp3"></audio> 
+  <audio id="winSound" src="mixkit-cheering-crowd-loud-whistle-610.mp3"></audio>
+  <audio id="drawSound" src="metal_twang.mp3"></audio>
+  <audio id="" src=""></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

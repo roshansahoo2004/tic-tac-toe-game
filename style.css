@@ -1,0 +1,131 @@
+/* CSS VARIABLES (Light / Dark) */
+:root {
+  --bg: #f4f6f8;
+  --card: #ffffff;
+  --text: #111;
+  --accent: #4f46e5;
+  --cell: #e5e7eb;
+  --win: #22c55e;
+}
+
+[data-theme="dark"] {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --text: #f8fafc;
+  --accent: #38bdf8;
+  --cell: #334155;
+}
+
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* APP */
+.app {
+  background: var(--card);
+  padding: 1rem;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* HEADER */
+header {
+  text-align: center;
+}
+
+.top-controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+select, button {
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+button {
+  background: var(--accent);
+  color: white;
+  transition: transform 0.2s, background 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* TURN */
+#turnIndicator {
+  text-align: center;
+  margin: 0.5rem 0;
+  font-weight: bold;
+}
+
+/* BOARD */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.cell {
+  background: var(--cell);
+  aspect-ratio: 1 / 1;
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.cell:hover {
+  transform: scale(1.05);
+}
+
+.cell.win {
+  background: var(--win);
+  color: white;
+}
+
+/* MESSAGE */
+.message {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  min-height: 1.5em;
+}
+
+/* SCORES */
+.scores {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+}
+
+/* CONTROLS */
+.controls {
+  display: flex;
+  gap: 0.5rem;
+}
